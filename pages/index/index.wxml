@@ -22,7 +22,9 @@
   </view>
   <view class="home-list">
     <view class="card-box" wx:for="{{list}}" wx:key="*this">
-      <image src="../../image/meishi1.jpg"></image>
+      <view class="left">
+      <image src="{{item.imgUrl}}"></image>
+      </view>
       <view class="right">
         <view class="right-one">
           {{item.title}}

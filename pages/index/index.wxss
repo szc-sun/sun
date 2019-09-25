@@ -33,52 +33,6 @@
   height:100%;
   width:100%
 }
-.demo-text-1{
-  position: relative;
-  height:100%;
-  align-items: center;
-  justify-content: center;
-  background-color: #1AAD19;
-  color: #FFFFFF;
-  font-size: 36rpx;
-}
-.demo-text-1:before{
-  content: 'A';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.demo-text-2{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: #2782D7;
-  color: #FFFFFF;
-  font-size: 36rpx;
-}
-.demo-text-2:before{
-  content: 'B';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.demo-text-3{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: #F1F1F1;
-  color: #353535;
-  font-size: 36rpx;
-}
-.demo-text-3:before{
-  content: 'C';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .home-list{
   width: 100%;
   display: flex;
@@ -86,15 +40,19 @@
 }
 .home-list .card-box{
     display: flex;
+    flex-direction: row;
+    align-items: center;
     height:200rpx;
-    width: 100%;
-    padding:10rpx;
+    /* padding:10rpx; */
     border:1rpx solid #ccc
+}
+.home-list .card-box .left{
+  height:200rpx;
+  width:300rpx;
 }
 .home-list .card-box image{
   height:100%;
-  width:200rpx;
-  margin:10rpx
+  width:100%;
 }
 .home-list .card-box .right{
   display: flex;

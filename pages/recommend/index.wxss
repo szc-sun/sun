@@ -1,1 +1,6 @@
 /* pages/recommend/index.wxss */
+.recommend-box{
+  height:200rpx;
+  width:200rpx;
+  background: red
+}

@@ -1,6 +1,6 @@
 <!-- 推荐页面 -->
 <view class="recommend">
-  <view>
+  <view class="recommend-box">
     {{title}}
   </view>
 </view>
