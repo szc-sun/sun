@@ -1,13 +1,37 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+  </view> -->
+  <view class="page-section page-section-spacing swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{bannerList}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+          <image src="{{item.url}}" class="home-image"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}123</text>
+  <view class="home-list">
+    <view class="card-box" wx:for="{{list}}" wx:key="*this">
+      <image src="../../image/meishi1.jpg"></image>
+      <view class="right">
+        <view class="right-one">
+          {{item.title}}
+        </view>
+        <view class="right-two">
+          {{item.content}}
+        </view>
+      </view>
+
+    </view>
   </view>
 </view>

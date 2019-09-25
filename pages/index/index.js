@@ -7,7 +7,51 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    // banner swiper配置
+    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+    bannerList:[
+      {
+        url: '../../image/meishi1.jpg',
+      },
+      {
+        url: '../../image/meishi2.jpg',
+      },
+      {
+        url: '../../image/meishi3.jpg',
+      }
+    ],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    circular: true,
+    interval: 2000,
+    duration: 500,
+    previousMargin: 0,
+    nextMargin: 0,
+    // 列表内容
+    list:[
+      {
+        imgUrl:'../../image/meishi1.jpg',
+        title:'烧烤',
+        content:'烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊'
+      },
+      {
+        imgUrl: '../../image/meishi1.jpg',
+        title: '烧烤',
+        content: '烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊'
+      },
+      {
+        imgUrl: '../../image/meishi1.jpg',
+        title: '烧烤',
+        content: '烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊'
+      },
+      {
+        imgUrl: '../../image/meishi1.jpg',
+        title: '烧烤',
+        content: '烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊'
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {

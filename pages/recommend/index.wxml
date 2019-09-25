@@ -1,0 +1,6 @@
+<!-- 推荐页面 -->
+<view class="recommend">
+  <view>
+    {{title}}
+  </view>
+</view>

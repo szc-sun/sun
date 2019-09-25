@@ -4,12 +4,12 @@ Component({
     color: "#7A7E83",
     selectedColor: "#3cc51f",
     list: [{
-      pagePath: "/index/index",
+      pagePath: "pages/index/index",
       iconPath: "/image/icon_component.png",
       selectedIconPath: "/image/icon_component_HL.png",
       text: "组件"
     }, {
-      pagePath: "/index/index2",
+        pagePath: "pages/logs/logs",
       iconPath: "/image/icon_API.png",
       selectedIconPath: "/image/icon_API_HL.png",
       text: "接口"
@@ -21,6 +21,7 @@ Component({
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
+      console.log(url)
       wx.switchTab({url})
       this.setData({
         selected: data.index
