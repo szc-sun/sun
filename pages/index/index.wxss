@@ -41,20 +41,23 @@
 .home-list .card-box{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     height:200rpx;
-    /* padding:10rpx; */
     border:1rpx solid #ccc
 }
 .home-list .card-box .left{
-  height:200rpx;
-  width:300rpx;
+  height:180rpx;
+  width:180rpx;
+  padding:10rpx;
 }
 .home-list .card-box image{
   height:100%;
   width:100%;
 }
 .home-list .card-box .right{
+  width:calc( 100% - 220rpx ); 
+  /* float: right; */
   display: flex;
   flex-direction:column;
   justify-content:space-around;
