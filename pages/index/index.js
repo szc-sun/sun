@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    navH: app.globalData.navHeight,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -113,11 +114,17 @@ Page({
     }
   },
   getUserInfo: function(e) {
+    console.log(123)
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  navHome:function(){
+    wx.reLaunch({
+      url: '../index/index'
     })
   }
 })

@@ -1,5 +1,16 @@
 <!--index.wxml-->
-<view class="container">
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="title_icon_btn"> <image src='../../image/yonghu.png' mode='aspectFit' class='back'></image> </button>
+    <image wx:else bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view></view>
+    <image src='../../image/yooxi.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+  <view class='title_text'>
+    sun 的小程序
+  </view>
+</view>
+<scroll-view  scroll-y="true" class="container" style='padding-top:{{navH}}px'>
   <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -36,4 +47,4 @@
 
     </view>
   </view>
-</view>
+</scroll-view>
