@@ -1,0 +1,3 @@
+<view class="more">
+<web-view src="http://www.wwidy.com/"></web-view>
+</view>

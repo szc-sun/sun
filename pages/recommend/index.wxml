@@ -2,5 +2,6 @@
 <view class="recommend">
   <view class="recommend-box">
     {{title}}
+    <web-view src="http://www.wwidy.com/"></web-view>
   </view>
 </view>

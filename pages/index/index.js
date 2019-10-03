@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 
-Page({
+Component({
   data: {
     navH: app.globalData.navHeight,
     motto: 'Hello World',
@@ -78,6 +78,16 @@ Page({
         content: '烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊烧烤好吃啊'
       }
     ]
+  },
+  pageLifetimes: {
+    show() {
+      if (typeof this.getTabBar === 'function' &&
+        this.getTabBar()) {
+        this.getTabBar().setData({
+          selected: 0
+        })
+      }
+    }
   },
   //事件处理函数
   bindViewTap: function() {
