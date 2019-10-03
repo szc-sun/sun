@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   padding: 40rpx;
+  height: calc(100vh - 48px);
+  /* overflow-x: hidden; */
+  overflow: auto;
 }
 .log-item {
   margin: 10rpx;

@@ -9,9 +9,6 @@ function getRandomColor() {
 }
 
 Component({
-  onReady: function (res) {
-    this.videoContext = wx.createVideoContext('myVideo')
-  },
   inputValue: '',
   data: {
     src: '',
@@ -27,30 +24,6 @@ Component({
         time: 3
       }]
   },
-  bindInputBlur: function (e) {
-    this.inputValue = e.detail.value
-  },
-  bindSendDanmu: function () {
-    this.videoContext.sendDanmu({
-      text: this.inputValue,
-      color: getRandomColor()
-    })
-  },
-  bindPlay: function () {
-    this.videoContext.play()
-  },
-  bindPause: function () {
-    this.videoContext.pause()
-  },
-  videoErrorCallback: function (e) {
-    console.log('视频错误信息:')
-    console.log(e.detail.errMsg)
-  },
-  moreVideo: function () {
-    wx.switchTab({
-      url: '../../index/index'
-    })
-  },
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' &&
@@ -60,5 +33,36 @@ Component({
         })
       }
     }
+  },
+  methods:{
+    onReady: function (res) {
+      this.videoContext = wx.createVideoContext('myVideo')
+    },
+    bindInputBlur: function (e) {
+      this.inputValue = e.detail.value
+    },
+    bindSendDanmu: function () {
+      this.videoContext.sendDanmu({
+        text: this.inputValue,
+        color: getRandomColor()
+      })
+    },
+    bindPlay: function () {
+      this.videoContext.play()
+    },
+    bindPause: function () {
+      this.videoContext.pause()
+    },
+    videoErrorCallback: function (e) {
+      console.log('视频错误信息:')
+      console.log(e.detail.errMsg)
+    },
+    moreVideo: function () {
+      console.log('../../media/video/more/more')
+      wx.navigateTo({
+        url: '../../media/video/more/more'
+      })
+    }
   }
+  
 })

@@ -60,19 +60,7 @@
   width:auto;
   padding:0;
 }
-/* 内容 */
-page{
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-/*隐藏滚动条*/
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
-}
+
 .page-section{
   width: 100%;
   margin-bottom: 60rpx;

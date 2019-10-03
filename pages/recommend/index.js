@@ -3,10 +3,13 @@ Component({
     recommend: [],
     title: '推荐'
   },
-  onLoad: function () {
-    this.setData({
-      title: '推荐页面'
-    })
+  methods:{
+    onLoad: function () {
+      console.log(123)
+      this.setData({
+        title: '推荐页面'
+      })
+    },
   },
   pageLifetimes: {
     show() {

@@ -16,3 +16,8 @@
 .page-section{
   text-align: center
 }
+.video{
+  height: calc(100vh - 48px);
+  /* overflow-x: hidden; */
+  overflow: auto;
+}

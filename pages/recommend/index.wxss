@@ -1,4 +1,9 @@
 /* pages/recommend/index.wxss */
+.recommend{
+  height: calc(100vh - 48px);
+  /* overflow-x: hidden; */
+  overflow: auto;
+}
 .recommend-box{
   height:200rpx;
   width:200rpx;

@@ -8,3 +8,16 @@
   padding: 10rpx 0;
   box-sizing: border-box;
 }
+/* 内容 */
+page{
+  width: 100vw;
+  height: calc(100vh - 48px);
+  /* overflow-x: hidden; */
+  overflow: auto;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
