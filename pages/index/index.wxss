@@ -69,6 +69,9 @@
   box-sizing: border-box;
   /* padding: 0 80rpx; */
 }
+swiper{
+  height:50vw;
+}
 .swiper-item{
   height:100%
 }

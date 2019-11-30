@@ -26,7 +26,7 @@ Component({
     vertical: false,
     autoplay: true,
     circular: true,
-    interval: 2000,
+    interval: 5000,
     duration: 500,
     previousMargin: 0,
     nextMargin: 0,

@@ -22,5 +22,16 @@
       <button bindtap="moreVideo" class="page-body-button" type="primary">更多视频</button>
     </view>
   </view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
+  <view>1</view>
   </view>
 </view>

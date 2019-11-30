@@ -1,3 +1,6 @@
+tab-bar{
+  position: relative
+}
 .tab-bar {
   position: fixed;
   bottom: 0;
