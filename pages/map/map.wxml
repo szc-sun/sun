@@ -1,0 +1,4 @@
+<!--pages/map/map.wxml-->
+<view class="map-test">
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" show-location></map>
+</view>
