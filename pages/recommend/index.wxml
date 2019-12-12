@@ -2,6 +2,6 @@
 <view class="recommend">
   <view class="recommend-box">
     {{title}}
-    <web-view src="http://www.dililitv.com/"></web-view>
+    <web-view src="https://www.baidu.com/"></web-view>
   </view>
 </view>

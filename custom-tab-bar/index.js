@@ -23,10 +23,10 @@ Component({
         "text": "推荐"
       },
       {
-        "pagePath": "/pages/logs/logs",
+        "pagePath": "/pages/map/map",
         "iconPath": "/image/icon_API.png",
         "selectedIconPath": "/image/icon_API_HL.png",
-        "text": "日志"
+        "text": "地图"
       }
     ]
   },
