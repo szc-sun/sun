@@ -55,6 +55,11 @@ Component({
       this.mapCtx = wx.createMapContext("map", this)
     },
     moveToLocation() {
+      wx.getLocation({
+        success(res) {
+          console.log(res)
+        }
+      })
       this.mapCtx.moveToLocation()
     },
 
@@ -63,7 +68,7 @@ Component({
      */
     onShow: function () {
       wx.getLocation({
-        // type: 'wgs84',
+        type: 'gcj02',
         // success(res) {
         //   console.log(res)
         // }
