@@ -1,6 +1,6 @@
 Component({
   data: {
-    selected: 0,
+    // selected: 0,
     color: "#7A7E83",
     selectedColor: "#3cc51f",
     "list": [
@@ -45,6 +45,7 @@ Component({
       //     selected: data.index
       //   })
       // }
+      console.log(data.index)
       wx.switchTab({ url })
     }
   }
