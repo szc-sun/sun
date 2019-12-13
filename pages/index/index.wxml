@@ -1,10 +1,11 @@
 <!--index.wxml-->
+<import src="../template/tabbar.wxml"/>
 <view class='nav' style='height:{{navH}}px'>
   <view class='title_icon'>
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="title_icon_btn"> <image src='../../image/yonghu.png' mode='aspectFit' class='back'></image> </button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="title_icon_btn"> <image src='/resources/images/yonghu.png' mode='aspectFit' class='back'></image> </button>
     <image wx:else bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     <view></view>
-    <image src='../../image/yooxi.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+    <image src='/resources/images/yooxi.png' mode='aspectFit' class='home' bindtap='navHome'></image>
   </view>
   <view class='title_text'>
     sun 的小程序
@@ -48,3 +49,4 @@
     </view>
   </view>
 </scroll-view>
+<template is="tabBar" data="{{tabBar:tabBar}}"></template>

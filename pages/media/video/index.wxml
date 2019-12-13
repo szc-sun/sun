@@ -1,4 +1,5 @@
 <!-- 推荐页面 -->
+<import src="../../template/tabbar.wxml"/>
 <view class="video page-body">
   <view class="video-box">
     {{title}}
@@ -22,6 +23,7 @@
       <button bindtap="moreVideo" class="page-body-button" type="primary">更多视频</button>
     </view>
   </view>
+  <!-- <view>1</view>
   <view>1</view>
   <view>1</view>
   <view>1</view>
@@ -31,7 +33,7 @@
   <view>1</view>
   <view>1</view>
   <view>1</view>
-  <view>1</view>
-  <view>1</view>
+  <view>1</view> -->
   </view>
 </view>
+<template is="tabBar" data="{{tabBar:tabBar}}"></template>

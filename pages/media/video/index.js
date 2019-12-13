@@ -1,3 +1,5 @@
+//获取应用实例
+const app = getApp()
 function getRandomColor() {
   const rgb = []
   for (let i = 0; i < 3; ++i) {
@@ -8,7 +10,7 @@ function getRandomColor() {
   return '#' + rgb.join('')
 }
 
-Component({
+Page({
   inputValue: '',
   data: {
     src: '',
@@ -24,45 +26,42 @@ Component({
         time: 3
       }]
   },
-  pageLifetimes: {
-    show() {
-      if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 1
-        })
-      }
-    }
+  onReady: function (res) {
+    this.videoContext = wx.createVideoContext('myVideo')
   },
-  methods:{
-    onReady: function (res) {
-      this.videoContext = wx.createVideoContext('myVideo')
-    },
-    bindInputBlur: function (e) {
-      this.inputValue = e.detail.value
-    },
-    bindSendDanmu: function () {
-      this.videoContext.sendDanmu({
-        text: this.inputValue,
-        color: getRandomColor()
-      })
-    },
-    bindPlay: function () {
-      this.videoContext.play()
-    },
-    bindPause: function () {
-      this.videoContext.pause()
-    },
-    videoErrorCallback: function (e) {
-      console.log('视频错误信息:')
-      console.log(e.detail.errMsg)
-    },
-    moreVideo: function () {
-      console.log('../../media/video/more/more')
-      wx.navigateTo({
-        url: '../../media/video/more/more'
-      })
-    }
+  onShow: function () {
+    // 这里的传入的参数user往往由登录时的角色判断获取，本例如果改为staff则呈现不同效果，app由const app = getApp()获取
+    wx.hideTabBar({
+      success: function () {
+        app.onTabBar('user');
+      }
+    })
+  },
+  bindInputBlur: function (e) {
+    this.inputValue = e.detail.value
+  },
+  bindSendDanmu: function () {
+    this.videoContext.sendDanmu({
+      text: this.inputValue,
+      color: getRandomColor()
+    })
+  },
+  bindPlay: function () {
+    this.videoContext.play()
+  },
+  bindPause: function () {
+    this.videoContext.pause()
+  },
+  videoErrorCallback: function (e) {
+    console.log('视频错误信息:')
+    console.log(e.detail.errMsg)
+  },
+  moreVideo: function () {
+    console.log('../../media/video/more/more')
+    wx.navigateTo({
+      url: '../../media/video/more/more'
+    })
   }
+
   
 })

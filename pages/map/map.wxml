@@ -1,4 +1,6 @@
 <!--pages/map/map.wxml-->
+<import src="../template/tabbar.wxml"/>
 <view class="map-test">
-<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" show-location></map>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="17" controls="{{controls}}" bindcontroltap="controltap" show-location></map>
 </view>
+<template is="tabBar" data="{{tabBar:tabBar}}"></template>

@@ -1,7 +1,13 @@
 /* pages/map/map.wxss */
+page{
+  height:100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
 .map-test{
-  height:100%;
-  width:100%;
+  /* height: calc(100%-101rpx); */
+  height: calc(100vh - 101rpx);
+  overflow: auto;
 }
 #map{
   height:100%;

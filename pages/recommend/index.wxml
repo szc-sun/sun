@@ -1,7 +1,9 @@
 <!-- 推荐页面 -->
+<import src="../template/tabbar.wxml"/>
 <view class="recommend">
   <view class="recommend-box">
     {{title}}
     <web-view src="https://www.bilibili.com"></web-view>
   </view>
 </view>
+<template is="tabBar" data="{{tabBar:tabBar}}"></template>

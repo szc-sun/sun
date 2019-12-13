@@ -1,6 +1,7 @@
 /**app.wxss**/
 .container {
-  height: 100%;
+  height: calc(100%-101rpx);
+  margin-bottom:101rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +12,8 @@
 /* 内容 */
 page{
   width: 100vw;
-  height: calc(100vh - 48px);
+  height: 100%;
+  /* height: calc(100vh - 48px); */
   /* overflow-x: hidden; */
   overflow: auto;
 }
@@ -20,4 +22,31 @@ page{
   width: 0;
   height: 0;
   color: transparent;
+}
+
+/*  自定义tabbar样式*/
+ 
+.tabbar {
+  height:101rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+}
+ 
+.tabbar-item {
+  flex-grow: 1;
+  padding: 6rpx 0;
+  text-align: center;
+}
+ 
+.tabbar-icon {
+  width: 46rpx;
+  height: 46rpx;
+  display: block;
+  margin: 0 auto;
+}
+ 
+.tabbar-text {
+  font-size: 24rpx;
 }
